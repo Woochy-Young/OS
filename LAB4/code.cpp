@@ -425,6 +425,8 @@ void testfifo()
 clockEnd=clock();
     printf ("先进先出算法缺页率：%f ,缺页：%d，耗时：%f\n", lost*1.0/V, lost,clockEnd-clockBegin);
     destroy (&q);
+    lost=0;
+    index=0;
 }
 
 void fifo (pQueue q, int num)
@@ -739,6 +741,8 @@ void testPBA()
 clockEnd=clock();
     printf ("页面缓冲算法缺页率：%f ,缺页：%d，耗时：%f\n", lost*1.0/V, lost,clockEnd-clockBegin);
     destroy (&q);
+     lost=0;
+    index=0;
 }
 
 void PBA (pQueue q, int num)
